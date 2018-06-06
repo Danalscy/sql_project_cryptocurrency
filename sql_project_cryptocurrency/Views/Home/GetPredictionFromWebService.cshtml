@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+@model IEnumerable<sql_project_cryptocurrency.Models.crypto>
+<h3>@ViewBag.Id Price: @ViewBag.Predicted</h3>
+<form class="form" method="post" action="/Home/GetPredictionFromWebService">
+    <input id="id_crypto" name="id_crypto" type="text" class="id_crypto" placeholder="ID_crypto">
+    <input id="submit" type="submit" class="submit" value="Predict">
+</form>
+

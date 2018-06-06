@@ -1,0 +1,61 @@
+﻿@model IEnumerable<sql_project_cryptocurrency.Models.crypto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.source)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.timestamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.volume_24h)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.change_7d)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.source)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.timestamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.volume_24h)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.change_7d)
+            </td>
+        </tr>
+    }
+
+</table>
